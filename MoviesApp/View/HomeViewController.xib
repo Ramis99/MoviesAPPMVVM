@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MoviesApp" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyView" destination="p6R-Pk-Has" id="hDV-dl-HYU"/>
+                <outlet property="listShowsTableViewCell" destination="fly-Xa-Hmo" id="ePo-oC-AUw"/>
+                <outlet property="tabBar" destination="v5B-9N-Lxc" id="epU-Wi-fJD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fly-Xa-Hmo">
+                    <rect key="frame" x="0.0" y="59" width="375" height="505"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6R-Pk-Has" customClass="EmptyView" customModule="MoviesApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="375" height="525"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5B-9N-Lxc">
+                    <rect key="frame" x="0.0" y="584" width="375" height="49"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <tabBarItem title="TV Shows" image="play.tv" catalog="system" id="bUB-DD-KJY"/>
+                        <tabBarItem systemItem="favorites" id="yAH-sV-P6h"/>
+                    </items>
+                </tabBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="p6R-Pk-Has" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0XQ-U8-k63"/>
+                <constraint firstItem="v5B-9N-Lxc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1xn-Tt-VKI"/>
+                <constraint firstItem="v5B-9N-Lxc" firstAttribute="top" secondItem="fly-Xa-Hmo" secondAttribute="bottom" constant="20" id="7nj-ve-6XJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="v5B-9N-Lxc" secondAttribute="bottom" id="Ueb-eU-Ow9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p6R-Pk-Has" secondAttribute="trailing" id="Z6M-7d-QPc"/>
+                <constraint firstItem="fly-Xa-Hmo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eof-lY-Hua"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v5B-9N-Lxc" secondAttribute="trailing" id="hyt-hh-Y1A"/>
+                <constraint firstItem="p6R-Pk-Has" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lBX-xQ-gUy"/>
+                <constraint firstItem="v5B-9N-Lxc" firstAttribute="top" secondItem="p6R-Pk-Has" secondAttribute="bottom" id="ltB-hf-DNF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fly-Xa-Hmo" secondAttribute="trailing" id="mSi-0g-mLI"/>
+                <constraint firstItem="fly-Xa-Hmo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pZq-Uh-6pL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="6" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play.tv" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
